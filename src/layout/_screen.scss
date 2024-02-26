@@ -1,0 +1,29 @@
+.output-screen {
+    grid-column: 1/5;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 10px;
+    margin: 7px;
+    border-radius: 5px;
+
+    .current{
+        font-size: 20px;
+    }
+
+
+    .previus{
+        font-size: 15px;
+    }
+}
+
+/* Agrega esto a tu archivo CSS o SCSS */
+.result {
+    color: green; /* O cualquier estilo que desees para resaltar el resultado */
+}

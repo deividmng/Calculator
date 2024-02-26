@@ -1,60 +1,43 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
-
-.output-screen {
-    grid-column: 1/5;
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 10px;
-    word-wrap: break-word;
-    word-break: break-all;
-
-
-    .current{
-        font-size: 20px;
-    }
-
-
-    .previus{
-        font-size: 15px;
-    }
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url(/assets/img/pexels-fwstudio-172289.jpg);
+  background-size: cover;
 }
 
-
+#toggleButton {
+  margin-top: 40px;
+  margin-left: 50px;
+}
 
 .calc {
-    position: relative;
-    min-height: 100vh;
-    background-color: aqua;
+  position: relative;
+  min-height: 100vh;
 }
 
 .container {
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    position: absolute;
-     top: 1%;
-    left: 40%;
-    transform: translate(-50);
-    grid-template-columns: repeat(4,100px);
-    grid-template-rows: minmax(120px,auto) repeat(5,120px);
-    background-color: antiquewhite;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    
-    .span{
-        grid-column: span 2;
-    }
-
-
-  
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  top: 11%;
+  left: 50%;
+  transform: translate(-50%);
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+  background-color: antiquewhite;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 10, 21); /* Agregando sombra en la derecha y abajo */
 }
 
-
-
+.span {
+  grid-column: span 2;
+}

@@ -3,6 +3,45 @@
   margin: 0;
 }
 
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url(/assets/img/pexels-fwstudio-172289.jpg);
+  background-size: cover;
+}
+
+#toggleButton {
+  margin-top: 40px;
+  margin-left: 50px;
+}
+
+.calc {
+  position: relative;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  top: 11%;
+  left: 50%;
+  transform: translate(-50%);
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+  background-color: antiquewhite;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgb(0, 0, 10); /* Agregando sombra en la derecha y abajo */
+}
+
+.span {
+  grid-column: span 2;
+}
+
 .output-screen {
   grid-column: 1/5;
   background-color: black;
@@ -14,6 +53,9 @@
   padding: 10px;
   word-wrap: break-word;
   word-break: break-all;
+  padding: 10px;
+  margin: 7px;
+  border-radius: 5px;
 }
 .output-screen .current {
   font-size: 20px;
@@ -22,30 +64,64 @@
   font-size: 15px;
 }
 
-.calc {
-  position: relative;
-  min-height: 100vh;
-  background-color: aqua;
-}
-
-.container {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  position: absolute;
-  top: 1%;
-  left: 40%;
-  transform: translate(-50);
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: minmax(120px, auto) repeat(5, 120px);
-  background-color: antiquewhite;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.container .span {
-  grid-column: span 2;
+/* Agrega esto a tu archivo CSS o SCSS */
+.result {
+  color: green; /* O cualquier estilo que desees para resaltar el resultado */
 }
 
 .container button {
   background: rgba(0, 0, 0, 0.04);
+  border: none;
+  outline: none;
+  margin: 10px;
+  border: 1px solid rgb(44, 31, 31);
+  box-shadow: 10px 10px 15px rgb(0, 0, 10);
+  border-radius: 100%;
+  align-items: center;
+  transition: transform 0.5s ease;
   cursor: pointer;
+}
+.container button:hover {
+  transform: translateY(2px);
+}
+
+.delete, .operation, .equel, .num {
+  background-color: antiquewhite;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+}
+.delete:hover, .operation:hover, .equel:hover, .num:hover {
+  transform: translateY(2px);
+}
+
+.delete:hover {
+  background-color: rgba(139, 44, 44, 0.678) !important;
+}
+
+.clear:hover {
+  background-color: rgba(139, 44, 44, 0.678) !important;
+}
+
+.operation:hover {
+  background-color: rgba(0, 0, 255, 0.705) !important;
+  color: white;
+}
+
+.equel:hover {
+  background-color: rgba(0, 128, 0, 0.648) !important;
+  color: white;
+}
+
+.num:hover {
+  background-color: #f4d4aa !important;
+  color: white;
+}
+
+.silence {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.silence .icon {
+  width: 40px;
+  height: 40px;
 }/*# sourceMappingURL=app.css.map */
