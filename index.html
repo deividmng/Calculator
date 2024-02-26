@@ -5,40 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="src/app.css" />
+    <script
+      src="https://kit.fontawesome.com/c2e8a021f2.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body>
 
+  <body>
     <div class="calc">
+      <div class="audio">
+        <button
+          data-sound="/assets/audios/0000327.mp3"
+          id="toggleButton"
+          class="silence"
+        >
+          <img
+            class="icon"
+            src="/assets/img/alto-volumen.png"
+            alt="Volume On"
+          />
+          <audio id="audioElement" src="/assets/audios/0000327.mp3"></audio>
+        </button>
+      </div>
+
       <div class="container">
         <div class="output-screen">
           <div class="previus"></div>
           <div class="current">0</div>
         </div>
 
-       <button class="span clear">AD</button>
-       <button class="delete">DELETE</button>
-       <button class="operation">%</button>
-       <button class="num">1 </button>
-       <button class="num">2</button>
-       <button class="num">3</button>
-       <button class="operation">*</button>
-       <button class="num">4</button>
-       <button class="num">5</button>
-       <button class="num">6</button>
-       <button class="operation">+</button>
-       <button class="num">7</button>
-       <button class="num">8</button>
-       <button class="num">9</button>
-       <button class="operation">-</button>
-       <button class="num">.</button>
-       <button class="num">0</button>
-       <button class="span equel">=</button>
-    
+        <button class="span clear">AD</button>
+        <button class="delete">C</button>
+        <button class="operation">%</button>
+        <button class="num">7</button>
+        <button class="num">8</button>
+        <button class="num">9</button>
+
+        <button class="operation">*</button>
+        <button class="num">4</button>
+        <button class="num">5</button>
+        <button class="num">6</button>
+        <button class="operation">+</button>
+
+        <button class="num">1</button>
+        <button class="num">2</button>
+        <button class="num">3</button>
+        <button class="operation">-</button>
+        <button class="num">.</button>
+        <button class="num">0</button>
+        <button class="span equel">=</button>
       </div>
     </div>
-
-
-
   </body>
   <script src="script.js"></script>
 </html>
